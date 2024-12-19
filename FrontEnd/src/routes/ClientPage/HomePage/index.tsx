@@ -6,6 +6,8 @@ import farofaPrincipal from '../../../assets/farofa-principal.svg';
 import starIcon from '../../../assets/star-icon.svg';
 import ButtonPrimary from "../../../components/ButtonPrimary";
 import ButtonSecondary from "../../../components/ButtonSecondary";
+import CardProduct from "../../../components/CardProduct";
+import imgProduct1 from '../../../assets/imgProduct1.svg';
 
 export default function HomePage() {
     return (
@@ -69,7 +71,15 @@ export default function HomePage() {
                                 <ButtonSecondary text="Comprar Agora" />
                             </div>
                         </div>
+                    </div>
 
+
+
+
+
+
+                    <div className="products-list">
+                        <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
                     </div>
                 </div>
             </div>

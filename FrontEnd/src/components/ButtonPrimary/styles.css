@@ -1,6 +1,7 @@
 .btn-primary {
   padding: 4px;
   border: 2px solid var(--fm-color-red-primary);
+  background-color: var(--fm-color-white-total);
   color: var(--fm-color-red-primary);
   border-radius: 10px;
   cursor: pointer;

@@ -1,0 +1,48 @@
+.card-product {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--fm-color-white-total);
+  height: 240px;
+  width: 190px;
+}
+
+.card-product h4 {
+  font-size: 14px;
+}
+
+.card-product-description p {
+  color: var(--fm-color-gray-secondary);
+}
+
+.card-product-review {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.card-product-img {
+  text-align: center;
+}
+
+.card-product-review img {
+  height: 14px;
+  width: 14px;
+}
+
+.card-product-review p {
+  font-size: 14px;
+  color: var(--fm-color-red-primary);
+}
+
+.card-product-review-and-increase {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-product-increase {
+  padding: 4px 10px;
+  background-color: var(--fm-color-red-primary);
+  border-radius: 50%;
+  color: var(--fm-color-white-total);
+  cursor: pointer;
+}
