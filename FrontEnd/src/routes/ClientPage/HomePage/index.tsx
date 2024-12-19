@@ -19,12 +19,9 @@ export default function HomePage() {
     const [quantityProductHighLighted, setQuantityProductHighLighted] = useState<number>(1);
 
     const settings: SwiperProps = {
-        spaceBetween: 50,
+        spaceBetween: 5,
         slidesPerView: 5,
         navigation: true,
-        pagination: {
-            clickable: true
-        }
     }
 
     function handleClickIncrease() {

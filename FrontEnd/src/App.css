@@ -86,6 +86,7 @@ main {
 
 .card-product-highlighted-img img {
   height: 260px;
+  border-radius: 20px;
 }
 
 .card-product-highlighted-description h4 {
@@ -165,11 +166,11 @@ main {
 
 .home-page-top {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .card-invite-kits {
-  padding: 5px 10px;
+  padding: 5px 0 5px 10px;
   border-radius: 20px;
   width: 366px;
   background: linear-gradient(
@@ -179,7 +180,7 @@ main {
   );
   color: var(--fm-color-white-total);
   display: flex;
-  max-height: 250px;
+  max-height: 222px;
   overflow: hidden;
 }
 
@@ -198,11 +199,11 @@ main {
 }
 .card-invite-kits-right {
   margin-left: auto;
-  margin-top: 10px;
+  margin-top: px;
 }
 
 .card-invite-kits-right img {
-  width: 110%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
