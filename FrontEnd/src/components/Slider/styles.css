@@ -1,0 +1,32 @@
+.swiper {
+  padding-bottom: 50px !important;
+}
+
+.swiper-pagination-bullet {
+  padding: 7px;
+  background-color: var(--fm-color-gray-secondary) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--fm-color-red-primary) !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: var(--fm-color-white-total);
+  border-radius: 50%;
+  height: 32px !important;
+  width: 32px !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next::after {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  color: var(--fm-color-gray-secondary);
+}
+
+.swiper-button-prev[aria-disabled="true"],
+.swiper-button-next[aria-disabled="true"] {
+  display: none;
+}

@@ -8,8 +8,20 @@ import ButtonPrimary from "../../../components/ButtonPrimary";
 import ButtonSecondary from "../../../components/ButtonSecondary";
 import CardProduct from "../../../components/CardProduct";
 import imgProduct1 from '../../../assets/imgProduct1.svg';
+import { SwiperProps, SwiperSlide } from "swiper/react";
+import Slider from "../../../components/Slider";
 
 export default function HomePage() {
+
+    const settings: SwiperProps = {
+        spaceBetween: 30,
+        slidesPerView: 4.5,
+        navigation: true,
+        pagination: {
+            clickable: true
+        }
+    }
+
     return (
         <section id="section-home-page">
             <header className="header-home-page">
@@ -34,7 +46,7 @@ export default function HomePage() {
                 </div>
             </header>
             <div className="home-page-content">
-                <div className="home-page-products">
+
                     <div className="card-product-highlighted">
                         <div className="card-product-highlighted-img">
                             <img src={farofaPrincipal} alt="" />
@@ -79,10 +91,52 @@ export default function HomePage() {
 
 
                     <div className="products-list">
-                        <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                        <Slider settings={settings}>
+                            <SwiperSlide>
+                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                            </SwiperSlide>
+
+
+                            <SwiperSlide>
+                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                            </SwiperSlide>
+
+                        </Slider>
+
                     </div>
                 </div>
-            </div>
         </section>
     );
 }
