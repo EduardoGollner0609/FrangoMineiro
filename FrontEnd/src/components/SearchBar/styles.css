@@ -25,5 +25,5 @@
 
 .search-bar button,
 .search-bar input {
-  background-color: #fff;
+  background-color: var(--fm-color-white-total);
 }

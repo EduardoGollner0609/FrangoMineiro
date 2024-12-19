@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
+:root {
+  --fm-color-white-total: #fff;
+
+  --fm-color-gray-primary: #ececec;
+  --fm-color-gray-secondary: #5c5c5c;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +33,6 @@ input {
 }
 
 main {
-  background-color: #ececec;
+  background-color: var(--fm-color-gray-primary);
   width: 100%;
 }
