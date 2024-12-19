@@ -1,0 +1,8 @@
+.btn-secondary {
+  padding: 4px;
+  border: none;
+  background-color: var(--fm-color-red-primary);
+  color: var(--fm-color-white-total);
+  border-radius: 10px;
+  cursor: pointer;
+}

@@ -2,6 +2,10 @@ import SearchBar from "../../../components/SearchBar";
 import messageIcon from '../../../assets/message-icon.svg';
 import notificationIcon from '../../../assets/notification-icon.svg';
 import userImg from '../../../assets/user-img.svg';
+import farofaPrincipal from '../../../assets/farofa-principal.svg';
+import starIcon from '../../../assets/star-icon.svg';
+import ButtonPrimary from "../../../components/ButtonPrimary";
+import ButtonSecondary from "../../../components/ButtonSecondary";
 
 export default function HomePage() {
     return (
@@ -27,6 +31,48 @@ export default function HomePage() {
                     </div>
                 </div>
             </header>
+            <div className="home-page-content">
+                <div className="home-page-products">
+                    <div className="card-product-highlighted">
+                        <div className="card-product-highlighted-img">
+                            <img src={farofaPrincipal} alt="" />
+                        </div>
+                        <div className="card-product-highlighted-description">
+                            <h4>Farofa Mineira Uai Bacon 400G</h4>
+                            <div className="card-product-highlighted-review">
+                                <div className="card-product-highlighted-stars">
+                                    <img src={starIcon} alt="" />
+                                    <img src={starIcon} alt="" />
+                                    <img src={starIcon} alt="" />
+                                    <img src={starIcon} alt="" />
+                                    <img src={starIcon} alt="" />
+                                </div>
+                                <p>(2000+ Reviews)</p>
+                            </div>
+                            <div className="card-product-highlighted-description-content">
+                                <p>Sabor intenso, crocância irresistível, autêntico aroma de bacon, versatilidade culinária, acompanhamento perfeito, ingredientes selecionados, sem conservantes artificiais</p>
+                            </div>
+                            <div className="card-product-highlighted-price-and-quantity">
+                                <h3>Preço: R$19.90</h3>
+                                <div className="card-product-highlighted-quantity">
+                                    <div className="quantity-decrement">
+                                        -
+                                    </div>
+                                    <p>1</p>
+                                    <div className="quantity-increase">
+                                        +
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="card-product-highlighted-btns">
+                                <ButtonPrimary text="Adicionar no Carrinho" />
+                                <ButtonSecondary text="Comprar Agora" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </section>
     );
 }

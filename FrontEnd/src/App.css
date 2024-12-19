@@ -3,6 +3,8 @@
 :root {
   --fm-color-white-total: #fff;
 
+  --fm-color-red-primary: #9b0101e5;
+
   --fm-color-gray-primary: #ececec;
   --fm-color-gray-secondary: #5c5c5c;
 }
@@ -47,12 +49,8 @@ main {
 .header-home-page h2 {
   font-size: 30px;
   color: yellow;
-  text-shadow: 
-  2px 2px 0 #d82323, 
-  -1px -1px 0 #d82323,  
-  1px -1px 0 #d82323,  
-  -1px 1px 0 #d82323,  
-  1px 1px 0 #d82323; 
+  text-shadow: 2px 2px 0 #d82323, -1px -1px 0 #d82323, 1px -1px 0 #d82323,
+    -1px 1px 0 #d82323, 1px 1px 0 #d82323;
   text-transform: uppercase;
 }
 
@@ -70,4 +68,92 @@ main {
 
 .home-page-user-details a img {
   border-radius: 10px;
+}
+
+.home-page-content {
+  padding: 0 20px;
+}
+
+.card-product-highlighted {
+  max-width: 750px;
+  background-color: var(--fm-color-white-total);
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.card-product-highlighted-description h4 {
+  font-size: 20px;
+}
+
+.card-product-highlighted-stars {
+  display: flex;
+  gap: 5px;
+}
+
+.card-product-highlighted-review {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-product-highlighted-review p {
+  font-size: 16px;
+  color: var(--fm-color-gray-secondary);
+}
+
+.card-product-highlighted-description-content {
+  margin-top: 20px;
+  color: var(--fm-color-gray-secondary);
+}
+
+.card-product-highlighted-price-and-quantity {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-product-highlighted-price-and-quantity h3 {
+  font-size: 28px;
+  color: var(--fm-color-red-primary);
+}
+
+.card-product-highlighted-quantity {
+  max-height: 35px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f2f2f2;
+  padding: 12px;
+  border-radius: 20px;
+}
+
+.quantity-decrement,
+.quantity-increase {
+  background-color: var(--fm-color-white-total);
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 25px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.card-product-highlighted-quantity p {
+  font-size: 18px;
+}
+
+.card-product-highlighted-btns {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.card-product-highlighted-btns button {
+  max-width: 130px;
 }
