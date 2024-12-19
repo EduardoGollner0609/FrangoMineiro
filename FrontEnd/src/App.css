@@ -36,3 +36,38 @@ main {
   background-color: var(--fm-color-gray-primary);
   width: 100%;
 }
+
+.header-home-page {
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-home-page h2 {
+  font-size: 30px;
+  color: yellow;
+  text-shadow: 
+  2px 2px 0 #d82323, 
+  -1px -1px 0 #d82323,  
+  1px -1px 0 #d82323,  
+  -1px 1px 0 #d82323,  
+  1px 1px 0 #d82323; 
+  text-transform: uppercase;
+}
+
+.home-page-user-details {
+  display: flex;
+  gap: 10px;
+}
+
+.home-page-user-details-item {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.home-page-user-details a img {
+  border-radius: 10px;
+}
