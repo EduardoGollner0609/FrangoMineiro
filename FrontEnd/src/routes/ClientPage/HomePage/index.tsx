@@ -8,6 +8,8 @@ import ButtonPrimary from "../../../components/ButtonPrimary";
 import ButtonSecondary from "../../../components/ButtonSecondary";
 import CardProduct from "../../../components/CardProduct";
 import imgProduct1 from '../../../assets/imgProduct1.svg';
+import farofasKitsImg from '../../../assets/farofa-kits-img.svg';
+import arrowRightIcon from '../../../assets/arrow-right-icon.svg';
 import { SwiperProps, SwiperSlide } from "swiper/react";
 import Slider from "../../../components/Slider";
 import { useState } from "react";
@@ -17,8 +19,8 @@ export default function HomePage() {
     const [quantityProductHighLighted, setQuantityProductHighLighted] = useState<number>(1);
 
     const settings: SwiperProps = {
-        spaceBetween: 30,
-        slidesPerView: 4.5,
+        spaceBetween: 50,
+        slidesPerView: 5,
         navigation: true,
         pagination: {
             clickable: true
@@ -61,44 +63,65 @@ export default function HomePage() {
                 </div>
             </header>
             <div className="home-page-content">
-
-                <div className="card-product-highlighted">
-                    <div className="card-product-highlighted-img">
-                        <img src={farofaPrincipal} alt="" />
+                <div className="home-page-top">
+                    <div className="card-product-highlighted">
+                        <div className="card-product-highlighted-img">
+                            <img src={farofaPrincipal} alt="" />
+                        </div>
+                        <div className="card-product-highlighted-description">
+                            <h4>Farofa Mineira Uai Bacon 400G</h4>
+                            <div className="card-product-highlighted-review">
+                                <div className="card-product-highlighted-stars">
+                                    <img src={starIcon} alt="" />
+                                    <img src={starIcon} alt="" />
+                                    <img src={starIcon} alt="" />
+                                    <img src={starIcon} alt="" />
+                                    <img src={starIcon} alt="" />
+                                </div>
+                                <p>(2000+ Reviews)</p>
+                            </div>
+                            <div className="card-product-highlighted-description-content">
+                                <p>Sabor intenso, crocância irresistível, autêntico aroma de bacon, versatilidade culinária, acompanhamento perfeito, ingredientes selecionados, sem conservantes artificiais</p>
+                            </div>
+                            <div className="card-product-highlighted-price-and-quantity">
+                                <h3>Preço: R$19.90</h3>
+                                <div className="card-product-highlighted-quantity">
+                                    <div className="quantity-decrement" onClick={handleClickDecrement}>
+                                        -
+                                    </div>
+                                    <p>{quantityProductHighLighted}</p>
+                                    <div className="quantity-increase" onClick={handleClickIncrease}>
+                                        +
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="card-product-highlighted-btns">
+                                <ButtonPrimary text="Adicionar no Carrinho" />
+                                <ButtonSecondary text="Comprar Agora" />
+                            </div>
+                        </div>
                     </div>
-                    <div className="card-product-highlighted-description">
-                        <h4>Farofa Mineira Uai Bacon 400G</h4>
-                        <div className="card-product-highlighted-review">
-                            <div className="card-product-highlighted-stars">
-                                <img src={starIcon} alt="" />
-                                <img src={starIcon} alt="" />
-                                <img src={starIcon} alt="" />
-                                <img src={starIcon} alt="" />
-                                <img src={starIcon} alt="" />
-                            </div>
-                            <p>(2000+ Reviews)</p>
-                        </div>
-                        <div className="card-product-highlighted-description-content">
-                            <p>Sabor intenso, crocância irresistível, autêntico aroma de bacon, versatilidade culinária, acompanhamento perfeito, ingredientes selecionados, sem conservantes artificiais</p>
-                        </div>
-                        <div className="card-product-highlighted-price-and-quantity">
-                            <h3>Preço: R$19.90</h3>
-                            <div className="card-product-highlighted-quantity">
-                                <div className="quantity-decrement" onClick={handleClickDecrement}>
-                                    -
-                                </div>
-                                <p>{quantityProductHighLighted}</p>
-                                <div className="quantity-increase" onClick={handleClickIncrease}>
-                                    +
-                                </div>
+
+                    <div className="card-invite-kits">
+                        <div className="card-invite-kits-left">
+                            <h3>Kits Farofas para o mês todo</h3>
+
+                            <div className="card-invite-kits-left-buy">
+                                <p>Compre já</p>
+                                <img src={arrowRightIcon} alt="" />
                             </div>
                         </div>
-                        <div className="card-product-highlighted-btns">
-                            <ButtonPrimary text="Adicionar no Carrinho" />
-                            <ButtonSecondary text="Comprar Agora" />
+
+                        <div className="card-invite-kits-right">
+                            <img src={farofasKitsImg} alt="" />
                         </div>
+
+
+
+
                     </div>
                 </div>
+
 
 
 

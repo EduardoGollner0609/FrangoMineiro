@@ -1,9 +1,16 @@
 .side-bar-navegation {
-  max-width: 320px;
+  max-width: 280px;
   height: 100vh;
-  padding: 15px;
+  padding: 10px 0;
 }
 
+.side-bar-header-logo img {
+  width: 280px;
+}
+
+.side-bar-navegation ul {
+  padding: 15px;
+}
 .side-bar-option-navegation img {
   height: 25px;
   width: 25px;
