@@ -7,7 +7,7 @@ export default function ClientPage() {
             <SideBarNavegation />
             <main>
                 <Outlet />
-            </main>
+            </main >
         </>
     );
 }

@@ -1,0 +1,29 @@
+.search-bar {
+  display: flex;
+}
+
+.search-bar button {
+  border: none;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-bar input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.search-bar button:nth-child(1) {
+  border-radius: 4px 0 0 4px;
+}
+
+.search-bar button:nth-child(3) {
+  border-radius: 0 4px 4px 0;
+}
+
+.search-bar button,
+.search-bar input {
+  background-color: #fff;
+}
