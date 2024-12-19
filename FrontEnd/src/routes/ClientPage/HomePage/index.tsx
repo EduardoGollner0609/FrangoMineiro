@@ -10,8 +10,11 @@ import CardProduct from "../../../components/CardProduct";
 import imgProduct1 from '../../../assets/imgProduct1.svg';
 import { SwiperProps, SwiperSlide } from "swiper/react";
 import Slider from "../../../components/Slider";
+import { useState } from "react";
 
 export default function HomePage() {
+
+    const [quantityProductHighLighted, setQuantityProductHighLighted] = useState<number>(1);
 
     const settings: SwiperProps = {
         spaceBetween: 30,
@@ -20,6 +23,18 @@ export default function HomePage() {
         pagination: {
             clickable: true
         }
+    }
+
+    function handleClickIncrease() {
+        setQuantityProductHighLighted(quantityProductHighLighted + 1);
+    }
+
+    function handleClickDecrement() {
+        if (quantityProductHighLighted <= 1) {
+            setQuantityProductHighLighted(1);
+            return;
+        }
+        setQuantityProductHighLighted(quantityProductHighLighted - 1);
     }
 
     return (
@@ -47,96 +62,96 @@ export default function HomePage() {
             </header>
             <div className="home-page-content">
 
-                    <div className="card-product-highlighted">
-                        <div className="card-product-highlighted-img">
-                            <img src={farofaPrincipal} alt="" />
-                        </div>
-                        <div className="card-product-highlighted-description">
-                            <h4>Farofa Mineira Uai Bacon 400G</h4>
-                            <div className="card-product-highlighted-review">
-                                <div className="card-product-highlighted-stars">
-                                    <img src={starIcon} alt="" />
-                                    <img src={starIcon} alt="" />
-                                    <img src={starIcon} alt="" />
-                                    <img src={starIcon} alt="" />
-                                    <img src={starIcon} alt="" />
-                                </div>
-                                <p>(2000+ Reviews)</p>
-                            </div>
-                            <div className="card-product-highlighted-description-content">
-                                <p>Sabor intenso, crocância irresistível, autêntico aroma de bacon, versatilidade culinária, acompanhamento perfeito, ingredientes selecionados, sem conservantes artificiais</p>
-                            </div>
-                            <div className="card-product-highlighted-price-and-quantity">
-                                <h3>Preço: R$19.90</h3>
-                                <div className="card-product-highlighted-quantity">
-                                    <div className="quantity-decrement">
-                                        -
-                                    </div>
-                                    <p>1</p>
-                                    <div className="quantity-increase">
-                                        +
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card-product-highlighted-btns">
-                                <ButtonPrimary text="Adicionar no Carrinho" />
-                                <ButtonSecondary text="Comprar Agora" />
-                            </div>
-                        </div>
+                <div className="card-product-highlighted">
+                    <div className="card-product-highlighted-img">
+                        <img src={farofaPrincipal} alt="" />
                     </div>
-
-
-
-
-
-
-                    <div className="products-list">
-                        <Slider settings={settings}>
-                            <SwiperSlide>
-                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
-                            </SwiperSlide>
-
-
-                            <SwiperSlide>
-                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
-                            </SwiperSlide>
-
-                        </Slider>
-
+                    <div className="card-product-highlighted-description">
+                        <h4>Farofa Mineira Uai Bacon 400G</h4>
+                        <div className="card-product-highlighted-review">
+                            <div className="card-product-highlighted-stars">
+                                <img src={starIcon} alt="" />
+                                <img src={starIcon} alt="" />
+                                <img src={starIcon} alt="" />
+                                <img src={starIcon} alt="" />
+                                <img src={starIcon} alt="" />
+                            </div>
+                            <p>(2000+ Reviews)</p>
+                        </div>
+                        <div className="card-product-highlighted-description-content">
+                            <p>Sabor intenso, crocância irresistível, autêntico aroma de bacon, versatilidade culinária, acompanhamento perfeito, ingredientes selecionados, sem conservantes artificiais</p>
+                        </div>
+                        <div className="card-product-highlighted-price-and-quantity">
+                            <h3>Preço: R$19.90</h3>
+                            <div className="card-product-highlighted-quantity">
+                                <div className="quantity-decrement" onClick={handleClickDecrement}>
+                                    -
+                                </div>
+                                <p>{quantityProductHighLighted}</p>
+                                <div className="quantity-increase" onClick={handleClickIncrease}>
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card-product-highlighted-btns">
+                            <ButtonPrimary text="Adicionar no Carrinho" />
+                            <ButtonSecondary text="Comprar Agora" />
+                        </div>
                     </div>
                 </div>
+
+
+
+
+
+
+                <div className="products-list">
+                    <Slider settings={settings}>
+                        <SwiperSlide>
+                            <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                        </SwiperSlide>
+
+
+                        <SwiperSlide>
+                            <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <CardProduct imgUrl={imgProduct1} name="Farofa Tradicional" price={19.90} review={4.9} />
+                        </SwiperSlide>
+
+                    </Slider>
+
+                </div>
+            </div>
         </section>
     );
 }
