@@ -1,9 +1,10 @@
 import './App.css'
+import SideBarNavegation from './components/SideBarNavegation'
 
 function App() {
 
   return (
-    <h1>Olá</h1>
+    <SideBarNavegation />
   )
 }
 

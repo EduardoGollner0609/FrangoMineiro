@@ -1,4 +1,5 @@
-import logoFrango from '../../assets/LogoFrango.svg';
+import './styles.css';
+import logoFrango from '../../assets/logoFrango.png';
 import homeIcon from '../../assets/home-icon.svg';
 import compassIcon from '../../assets/compass-icon.svg';
 import cartIcon from '../../assets/cart-icon.svg';
@@ -16,32 +17,49 @@ export default function SideBarNavegation() {
             <div className="side-bar-navegation-list">
                 <ul>
                     <li className="side-bar-option-navegation">
-                        <img src={homeIcon} alt="Inicio" />
-                        <p>Inicio</p>
+                        <a href="">
+                            <img src={homeIcon} alt="Inicio" />
+                            <p>Inicio</p>
+                        </a>
                     </li>
                     <li className="side-bar-option-navegation">
-                        <img src={compassIcon} alt="Procurar" />
-                        <p>Procurar</p>
+                        <a href="">
+                            <img src={compassIcon} alt="Procurar" />
+                            <p>Procurar</p>
+                        </a>
                     </li>
                     <li className="side-bar-option-navegation">
-                        <img src={cartIcon} alt="Carrinho" />
-                        <p>Carrinho</p>
+                        <a href="">
+                            <img src={cartIcon} alt="Carrinho" />
+                            <p>Carrinho</p>
+
+                        </a>
                     </li>
                     <li className="side-bar-option-navegation">
-                        <img src={userIcon} alt="Perfil" />
-                        <p>Perfil</p>
+                        <a href="">
+                            <img src={userIcon} alt="Perfil" />
+                            <p>Perfil</p>
+
+                        </a>
                     </li>
                     <li className="side-bar-option-navegation">
-                        <img src={historyIcon} alt="Histórico de Compras" />
-                        <p>Histórico de Compras</p>
+                        <a href="">
+
+                            <img src={historyIcon} alt="Histórico de Compras" />
+                            <p>Histórico de Compras</p>
+                        </a>
                     </li>
                     <li className="side-bar-option-navegation">
-                        <img src={contactIcon} alt="Contato" />
-                        <p>Contato</p>
+                        <a href="">
+                            <img src={contactIcon} alt="Contato" />
+                            <p>Contato</p>
+                        </a>
                     </li>
                     <li className="side-bar-option-navegation">
-                        <img src={aboutUsIcon} alt="Sobre nós" />
-                        <p>Sobre nós</p>
+                        <a href="">
+                            <img src={aboutUsIcon} alt="Sobre nós" />
+                            <p>Sobre nós</p>
+                        </a>
                     </li>
                 </ul>
             </div>
